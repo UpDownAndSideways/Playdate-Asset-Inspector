@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom checkerboard pattern for transparency preview */
+.transparency-checkerboard {
+  background-color: #1a1a1f;
+  background-image: 
+    linear-gradient(45deg, #25262c 25%, transparent 25%),
+    linear-gradient(-45deg, #25262c 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #25262c 75%),
+    linear-gradient(-45deg, transparent 75%, #25262c 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+.transparency-checkerboard-light {
+  background-color: #f1f3f5;
+  background-image: 
+    linear-gradient(45deg, #e2e5e9 25%, transparent 25%),
+    linear-gradient(-45deg, #e2e5e9 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e2e5e9 75%),
+    linear-gradient(-45deg, transparent 75%, #e2e5e9 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+/* Pixel art rendering */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
